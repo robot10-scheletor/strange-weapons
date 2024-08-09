@@ -151,3 +151,63 @@ minetest.register_tool("strange_weapons:tiny_friend", {
 	sound = {breaks = "default_dig_snappy"},
 	groups = {sword = 1}
 })
+
+minetest.register_tool("strange_weapons:the_pot", {
+    description = "The Pot",
+    inventory_image = "the_pot.png",
+	tool_capabilities = {
+		full_punch_interval = 0.1,
+		max_drop_level=1,
+		groupcaps={
+					snappy={times={[3]=4}, uses=3, maxlevel=0},
+		},
+		damage_groups = {fleshy=2},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {sword = 1}
+})
+
+minetest.register_tool("strange_weapons:t_v", {
+    description = "T.V. (Terrible deadly Vision)",
+    inventory_image = "t_v.png",
+	tool_capabilities = {
+		full_punch_interval = 1.5,
+		max_drop_level=1,
+		groupcaps={
+					snappy={times={[3]=4}, uses=5, maxlevel=0},
+		},
+		damage_groups = {fleshy=9},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {sword = 1}
+})
+
+minetest.register_tool("strange_weapons:sharp_lilypad", {
+    description = "Sharp Lilypad",
+    inventory_image = "sharp_lilypad.png",
+	tool_capabilities = {
+		full_punch_interval = 1.5,
+		max_drop_level=1,
+		groupcaps={
+					snappy={times={[3]=0.3}, uses=10, maxlevel=0},
+		},
+		damage_groups = {fleshy=9},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {sword = 1}
+})
+
+minetest.register_tool("strange_weapons:trophy", {
+    description = "Trophy",
+    inventory_image = "trophy.png",
+	tool_capabilities = {
+		full_punch_interval = 1.5,
+		max_drop_level=1,
+		groupcaps={
+					snappy={times={[3]=0.3}, uses=10, maxlevel=3},
+		},
+		damage_groups = {fleshy=20},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {sword = 1}
+})
