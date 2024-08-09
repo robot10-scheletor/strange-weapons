@@ -66,7 +66,7 @@ minetest.register_tool("strange_weapons:the_leaf", {
     description = "The Leaf",
     inventory_image = "the_leaf.png",
 	tool_capabilities = {
-		full_punch_interval = 0.6,
+		full_punch_interval = 0.1,
 		max_drop_level=1,
 		groupcaps={
 					snappy={times={[3]=3}, uses=50, maxlevel=0},
@@ -81,12 +81,12 @@ minetest.register_tool("strange_weapons:cracked_wood", {
     description = "Cracked Wood",
     inventory_image = "cracked_wood.png",
 	tool_capabilities = {
-		full_punch_interval = 0.6,
+		full_punch_interval = 1,
 		max_drop_level=1,
 		groupcaps={
 					snappy={times={[3]=3}, uses=10, maxlevel=0},
 		},
-		damage_groups = {fleshy=2},
+		damage_groups = {fleshy=10},
 	},
 	sound = {breaks = "default_tool_breaks"},
 	groups = {sword = 1}
