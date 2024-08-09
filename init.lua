@@ -91,3 +91,63 @@ minetest.register_tool("strange_weapons:cracked_wood", {
 	sound = {breaks = "default_tool_breaks"},
 	groups = {sword = 1}
 })
+
+minetest.register_tool("strange_weapons:moss_punch", {
+    description = "Moss Punch",
+    inventory_image = "moss_punch.png",
+	tool_capabilities = {
+		full_punch_interval = 0.2,
+		max_drop_level=1,
+		groupcaps={
+					snappy={times={[3]=3}, uses=1, maxlevel=0},
+		},
+		damage_groups = {fleshy=7},
+	},
+	sound = {breaks = "default_dig_snappy"},
+	groups = {sword = 1}
+})
+
+minetest.register_tool("strange_weapons:steel_grass", {
+    description = "Steel Grass",
+    inventory_image = "steel_grass.png",
+	tool_capabilities = {
+		full_punch_interval = 0.1,
+		max_drop_level=1,
+		groupcaps={
+					snappy={times={[3]=3}, uses=30, maxlevel=1},
+		},
+		damage_groups = {fleshy=6},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {sword = 1}
+})
+
+minetest.register_tool("strange_weapons:broom_broom", {
+    description = "Broom Broom",
+    inventory_image = "broom_broom.png",
+	tool_capabilities = {
+		full_punch_interval = 0.2,
+		max_drop_level=1,
+		groupcaps={
+					snappy={times={[3]=0.5}, uses=70, maxlevel=2},
+		},
+		damage_groups = {fleshy=15},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {sword = 1}
+})
+
+minetest.register_tool("strange_weapons:tiny_friend", {
+    description = "Tiny (but deadly) Friend",
+    inventory_image = "tiny_friend.png",
+	tool_capabilities = {
+		full_punch_interval = 0.1,
+		max_drop_level=1,
+		groupcaps={
+					snappy={times={[3]=0.5}, uses=1000, maxlevel=3},
+		},
+		damage_groups = {fleshy=20},
+	},
+	sound = {breaks = "default_dig_snappy"},
+	groups = {sword = 1}
+})
