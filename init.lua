@@ -32,3 +32,18 @@ minetest.register_tool("strange_weapons:the_fork", {
 	groups = {sword = 1}
 })
 
+minetest.register_tool("strange_weapons:mud_ball", {
+    description = "Mud Ball",
+    inventory_image = "mud_ball.png",
+	tool_capabilities = {
+		full_punch_interval = 0.5,
+		max_drop_level=1,
+		groupcaps={
+					snappy={times={[3]=3}, uses=1, maxlevel=0},
+		},
+		damage_groups = {fleshy=2},
+	},
+	sound = {breaks = "default_dirt_footstep"},
+	groups = {sword = 1}
+})
+
