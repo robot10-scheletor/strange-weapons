@@ -2,6 +2,10 @@ print("This file will be run at load time!")
 
 local MP = minetest.get_modpath("strange_weapons")
 
+if minetest.get_modpath("moreores") then
+	dofile(MP.."/weapons_mo.lua")
+end
+
 minetest.register_tool("strange_weapons:the_spoon", {
     description = "The Spoon",
     inventory_image = "the_spoon.png",
@@ -11,7 +15,7 @@ minetest.register_tool("strange_weapons:the_spoon", {
 		groupcaps={
 					snappy={times={[3]=3}, uses=3, maxlevel=0},
 		},
-		damage_groups = {fleshy=3, uses=3, maxlevel=0},
+		damage_groups = {fleshy=3},
 	},
 	sound = {breaks = "default_tool_breaks"},
 	groups = {sword = 1}
