@@ -6,6 +6,14 @@ if minetest.get_modpath("moreores") then
 	dofile(MP.."/weapons_mo.lua")
 end
 
+if minetest.get_modpath("pep") then
+	dofile(MP.."/weapon_pep.lua")
+end
+
+if minetest.get_modpath("nssm") then
+	dofile(MP.."/weapons_nssm.lua")
+end
+
 minetest.register_tool("strange_weapons:the_spoon", {
     description = "The Spoon",
     inventory_image = "the_spoon.png",
