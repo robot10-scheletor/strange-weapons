@@ -6,6 +6,10 @@ if minetest.get_modpath("moreores") then
 	dofile(MP.."/weapons_mo.lua")
 end
 
+if minetest.get_modpath("ore_deposits") then
+	dofile(MP.."/weapons_de.lua")
+end
+
 if minetest.get_modpath("pep") then
 	dofile(MP.."/weapon_pep.lua")
 end
@@ -219,6 +223,21 @@ minetest.register_tool("strange_weapons:trophy", {
 					snappy={times={[3]=0.3}, uses=10, maxlevel=3},
 		},
 		damage_groups = {fleshy=20},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {sword = 1}
+})
+
+minetest.register_tool("strange_weapons:teddy_bear", {
+    description = "Teddy Bear",
+    inventory_image = "teddy_bear.png",
+	tool_capabilities = {
+		full_punch_interval = 1.5,
+		max_drop_level=1,
+		groupcaps={
+					snappy={times={[3]=0.3}, uses=200, maxlevel=3},
+		},
+		damage_groups = {fleshy=27},
 	},
 	sound = {breaks = "default_tool_breaks"},
 	groups = {sword = 1}
