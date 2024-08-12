@@ -2,6 +2,8 @@ print("This file will be run at load time!")
 
 local MP = minetest.get_modpath("strange_weapons")
 
+dofile(MP.."/craftings.lua")
+
 if minetest.get_modpath("moreores") then
 	dofile(MP.."/weapons_mo.lua")
 end
@@ -12,11 +14,6 @@ end
 
 if minetest.get_modpath("shooter") then
 	dofile(MP.."/weapons_shoot.lua")
-end
-
-
-if minetest.get_modpath("pep") then
-	dofile(MP.."/weapon_pep.lua")
 end
 
 if minetest.get_modpath("nssm") then
@@ -150,7 +147,7 @@ minetest.register_tool("strange_weapons:broom_broom", {
 		full_punch_interval = 0.2,
 		max_drop_level=1,
 		groupcaps={
-					snappy={times={[3]=0.5}, uses=70, maxlevel=2},
+					snappy={times={[3]=0.5}, uses=1, maxlevel=2},
 		},
 		damage_groups = {fleshy=15},
 	},
