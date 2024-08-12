@@ -10,6 +10,11 @@ if minetest.get_modpath("ore_deposits") then
 	dofile(MP.."/weapons_de.lua")
 end
 
+if minetest.get_modpath("shooter") then
+	dofile(MP.."/weapons_shoot.lua")
+end
+
+
 if minetest.get_modpath("pep") then
 	dofile(MP.."/weapon_pep.lua")
 end
